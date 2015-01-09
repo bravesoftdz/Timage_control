@@ -1,0 +1,124 @@
+object Form1: TForm1
+  Left = 0
+  Top = 0
+  Caption = 'Form1'
+  ClientHeight = 508
+  ClientWidth = 320
+  FormFactor.Width = 320
+  FormFactor.Height = 480
+  FormFactor.Devices = [Desktop]
+  OnActivate = FormActivate
+  DesignerMobile = True
+  DesignerWidth = 320
+  DesignerHeight = 533
+  DesignerDeviceName = 'Samsung Galaxy S2'
+  DesignerOrientation = 0
+  DesignerOSVersion = ''
+  object ToolBar1: TToolBar
+    Align = Bottom
+    Height = 48.000000000000000000
+    Position.Y = 460.000000000000000000
+    TabOrder = 1
+    Width = 320.000000000000000000
+    object Button1: TButton
+      Align = Left
+      Height = 48.000000000000000000
+      StyleLookup = 'priortoolbutton'
+      TabOrder = 1
+      Text = 'Button1'
+      Width = 48.000000000000000000
+      OnClick = Button1Click
+    end
+    object Button2: TButton
+      Align = Center
+      Height = 48.000000000000000000
+      StyleLookup = 'actiontoolbutton'
+      TabOrder = 2
+      Text = 'Button2'
+      Width = 48.000000000000000000
+      OnClick = Button2Click
+    end
+    object Button3: TButton
+      Align = Right
+      Height = 48.000000000000000000
+      Position.X = 272.000000000000000000
+      StyleLookup = 'nexttoolbutton'
+      TabOrder = 3
+      Text = 'Button3'
+      Width = 48.000000000000000000
+      OnClick = Button3Click
+    end
+    object ShadowEffect1: TShadowEffect
+      Distance = 3.000000000000000000
+      Direction = 45.000000000000000000
+      Softness = 0.300000011920929000
+      Opacity = 0.600000023841857900
+      ShadowColor = claBlack
+    end
+    object Button4: TButton
+      Align = Right
+      Height = 48.000000000000000000
+      Position.X = 224.000000000000000000
+      StyleLookup = 'bookmarkstoolbutton'
+      TabOrder = 4
+      Text = 'Button4'
+      Width = 48.000000000000000000
+    end
+  end
+  object ImageControl1: TImageControl
+    Touch.GestureManager = GestureManager1
+    Align = Client
+    Height = 460.000000000000000000
+    TabOrder = 2
+    Width = 320.000000000000000000
+  end
+  object BlurEffect1: TBlurEffect
+    Softness = 0.300000011920929000
+  end
+  object BlurEffect2: TBlurEffect
+    Softness = 0.300000011920929000
+  end
+  object ShadowEffect2: TShadowEffect
+    Distance = 3.000000000000000000
+    Direction = 45.000000000000000000
+    Softness = 0.300000011920929000
+    Opacity = 0.600000023841857900
+    ShadowColor = claBlack
+  end
+  object BlurTransitionEffect1: TBlurTransitionEffect
+    Progress = 30.000000000000000000
+  end
+  object GestureManager1: TGestureManager
+    Left = 176
+    Top = 256
+    GestureData = <
+      item
+        Control = ImageControl1
+        Collection = <
+          item
+            Action = Action1
+            GestureID = sgiLeft
+          end
+          item
+            Action = Action2
+            GestureID = sgiRight
+          end>
+      end>
+  end
+  object ActionList1: TActionList
+    Left = 80
+    Top = 120
+    object Action1: TAction
+      Text = 'Action1'
+      OnExecute = Action1Execute
+    end
+    object Action2: TAction
+      Text = 'Action2'
+      OnExecute = Action2Execute
+    end
+  end
+  object MediaPlayer1: TMediaPlayer
+    Left = 176
+    Top = 168
+  end
+end
