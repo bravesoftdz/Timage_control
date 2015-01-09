@@ -44,6 +44,15 @@
             <RemoteCommand/>
             <Overwrite>True</Overwrite>
         </DeployFile>
+        <DeployFile Include="Android\Debug\libProject1.so" Condition="'$(Config)'=='Debug'">
+            <RemoteDir>Project1\library\lib\armeabi-v7a\</RemoteDir>
+            <RemoteName>libProject1.so</RemoteName>
+            <Operation>1</Operation>
+            <LocalCommand/>
+            <RemoteCommand/>
+            <Overwrite>True</Overwrite>
+            <Required>True</Required>
+        </DeployFile>
         <DeployFile Include="c:\program files (x86)\embarcadero\studio\14.0\lib\android\debug\classes.dex" Condition="'$(Config)'=='Debug'">
             <RemoteDir>Project1\classes\</RemoteDir>
             <RemoteName>classes.dex</RemoteName>
@@ -59,15 +68,6 @@
             <LocalCommand/>
             <RemoteCommand/>
             <Overwrite>True</Overwrite>
-        </DeployFile>
-        <DeployFile Include="Android\Debug\libProject1.so" Condition="'$(Config)'=='Debug'">
-            <RemoteDir>Project1\library\lib\armeabi-v7a\</RemoteDir>
-            <RemoteName>libProject1.so</RemoteName>
-            <Operation>1</Operation>
-            <LocalCommand/>
-            <RemoteCommand/>
-            <Overwrite>True</Overwrite>
-            <Required>True</Required>
         </DeployFile>
         <DeployFile Include="$(BDS)\bin\Artwork\Android\FM_LauncherIcon_144x144.png" Condition="'$(Config)'=='Debug'">
             <RemoteDir>Project1\res\drawable-xxhdpi\</RemoteDir>

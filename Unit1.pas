@@ -16,23 +16,24 @@ type
     Button2: TButton;
     Button3: TButton;
     ImageControl1: TImageControl;
-    BlurEffect1: TBlurEffect;
-    BlurEffect2: TBlurEffect;
     ShadowEffect1: TShadowEffect;
     Button4: TButton;
-    ShadowEffect2: TShadowEffect;
     GestureManager1: TGestureManager;
     ActionList1: TActionList;
     Action1: TAction;
     Action2: TAction;
-    BlurTransitionEffect1: TBlurTransitionEffect;
     MediaPlayer1: TMediaPlayer;
+    GaussianBlurEffect1: TGaussianBlurEffect;
+    TrackBar1: TTrackBar;
+    GlowEffect1: TGlowEffect;
     procedure Button3Click(Sender: TObject);
     procedure FormActivate(Sender: TObject);
     procedure Button1Click(Sender: TObject);
     procedure Action1Execute(Sender: TObject);
     procedure Action2Execute(Sender: TObject);
     procedure Button2Click(Sender: TObject);
+    procedure Button4Click(Sender: TObject);
+    procedure TrackBar1Change(Sender: TObject);
   private
     { Private declarations }
   public
@@ -53,6 +54,11 @@ begin
  s[2]:='http://startandroid.ru/images/stories/lessons/L0003/L0003_020.png';
  s[3]:='http://adv.kaztrk.kz/images/24fcb31240b39083b2622d6ff6e13b09.jpg';
 
+end;
+
+procedure TForm1.TrackBar1Change(Sender: TObject);
+begin
+  GaussianBlurEffect1.BlurAmount:= TrackBar1.Value / 100;
 end;
 
 procedure LoadWebImage(url: string; image :TBitmap);
@@ -133,5 +139,14 @@ end;
 
 
 
+
+procedure TForm1.Button4Click(Sender: TObject);
+begin
+GaussianBlurEffect1.BlurAmount:= TrackBar1.Value / 100;
+if GaussianBlurEffect1.Enabled then
+  GaussianBlurEffect1.Enabled:=false else
+  GaussianBlurEffect1.Enabled:=true;
+
+end;
 
 end.

@@ -63,6 +63,7 @@ object Form1: TForm1
       TabOrder = 4
       Text = 'Button4'
       Width = 48.000000000000000000
+      OnClick = Button4Click
     end
   end
   object ImageControl1: TImageControl
@@ -71,22 +72,28 @@ object Form1: TForm1
     Height = 460.000000000000000000
     TabOrder = 2
     Width = 320.000000000000000000
+    object GaussianBlurEffect1: TGaussianBlurEffect
+      Enabled = False
+      BlurAmount = 1.000000000000000000
+    end
   end
-  object BlurEffect1: TBlurEffect
-    Softness = 0.300000011920929000
+  object MediaPlayer1: TMediaPlayer
+    Left = 176
+    Top = 168
   end
-  object BlurEffect2: TBlurEffect
-    Softness = 0.300000011920929000
-  end
-  object ShadowEffect2: TShadowEffect
-    Distance = 3.000000000000000000
-    Direction = 45.000000000000000000
-    Softness = 0.300000011920929000
-    Opacity = 0.600000023841857900
-    ShadowColor = claBlack
-  end
-  object BlurTransitionEffect1: TBlurTransitionEffect
-    Progress = 30.000000000000000000
+  object TrackBar1: TTrackBar
+    Align = Client
+    Height = 32.000000000000000000
+    Orientation = Horizontal
+    TabOrder = 10
+    Value = 30.000000000000000000
+    Width = 320.000000000000000000
+    OnChange = TrackBar1Change
+    object GlowEffect1: TGlowEffect
+      Softness = 0.400000005960464500
+      GlowColor = claDeepskyblue
+      Opacity = 0.899999976158142100
+    end
   end
   object GestureManager1: TGestureManager
     Left = 176
@@ -116,9 +123,5 @@ object Form1: TForm1
       Text = 'Action2'
       OnExecute = Action2Execute
     end
-  end
-  object MediaPlayer1: TMediaPlayer
-    Left = 176
-    Top = 168
   end
 end
