@@ -2,50 +2,49 @@ object Form1: TForm1
   Left = 0
   Top = 0
   Caption = 'Form1'
-  ClientHeight = 508
+  ClientHeight = 548
   ClientWidth = 320
   FormFactor.Width = 320
   FormFactor.Height = 480
   FormFactor.Devices = [Desktop]
   OnActivate = FormActivate
-  DesignerMobile = True
-  DesignerWidth = 320
-  DesignerHeight = 533
-  DesignerDeviceName = 'Samsung Galaxy S2'
-  DesignerOrientation = 0
-  DesignerOSVersion = ''
+  DesignerMasterStyle = 2
   object ToolBar1: TToolBar
     Align = Bottom
-    Height = 48.000000000000000000
-    Position.Y = 460.000000000000000000
+    Position.Y = 504.000000000000000000
+    Size.Width = 320.000000000000000000
+    Size.Height = 44.000000000000000000
+    Size.PlatformDefault = False
     TabOrder = 1
-    Width = 320.000000000000000000
     object Button1: TButton
       Align = Left
-      Height = 48.000000000000000000
+      Size.Width = 44.000000000000000000
+      Size.Height = 44.000000000000000000
+      Size.PlatformDefault = False
       StyleLookup = 'priortoolbutton'
       TabOrder = 1
       Text = 'Button1'
-      Width = 48.000000000000000000
       OnClick = Button1Click
     end
     object Button2: TButton
       Align = Center
-      Height = 48.000000000000000000
+      Size.Width = 44.000000000000000000
+      Size.Height = 44.000000000000000000
+      Size.PlatformDefault = False
       StyleLookup = 'actiontoolbutton'
       TabOrder = 2
       Text = 'Button2'
-      Width = 48.000000000000000000
       OnClick = Button2Click
     end
     object Button3: TButton
       Align = Right
-      Height = 48.000000000000000000
-      Position.X = 272.000000000000000000
+      Position.X = 276.000000000000000000
+      Size.Width = 44.000000000000000000
+      Size.Height = 44.000000000000000000
+      Size.PlatformDefault = False
       StyleLookup = 'nexttoolbutton'
       TabOrder = 3
       Text = 'Button3'
-      Width = 48.000000000000000000
       OnClick = Button3Click
     end
     object ShadowEffect1: TShadowEffect
@@ -57,21 +56,23 @@ object Form1: TForm1
     end
     object Button4: TButton
       Align = Right
-      Height = 48.000000000000000000
-      Position.X = 224.000000000000000000
+      Position.X = 232.000000000000000000
+      Size.Width = 44.000000000000000000
+      Size.Height = 44.000000000000000000
+      Size.PlatformDefault = False
       StyleLookup = 'bookmarkstoolbutton'
       TabOrder = 4
       Text = 'Button4'
-      Width = 48.000000000000000000
       OnClick = Button4Click
     end
   end
   object ImageControl1: TImageControl
     Touch.GestureManager = GestureManager1
     Align = Client
-    Height = 460.000000000000000000
+    Size.Width = 320.000000000000000000
+    Size.Height = 504.000000000000000000
+    Size.PlatformDefault = False
     TabOrder = 2
-    Width = 320.000000000000000000
     object GaussianBlurEffect1: TGaussianBlurEffect
       Enabled = False
       BlurAmount = 1.000000000000000000
@@ -83,11 +84,12 @@ object Form1: TForm1
   end
   object TrackBar1: TTrackBar
     Align = Client
-    Height = 32.000000000000000000
     Orientation = Horizontal
+    Size.Width = 320.000000000000000000
+    Size.Height = 36.000000000000000000
+    Size.PlatformDefault = False
     TabOrder = 10
     Value = 30.000000000000000000
-    Width = 320.000000000000000000
     OnChange = TrackBar1Change
     object GlowEffect1: TGlowEffect
       Softness = 0.400000005960464500

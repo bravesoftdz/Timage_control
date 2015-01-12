@@ -47,6 +47,8 @@ var
 implementation
 
 {$R *.fmx}
+{$R *.iPhone4in.fmx IOS}
+
 procedure TForm1.FormActivate(Sender: TObject);
 begin
  s[0]:='1';

@@ -1,0 +1,18 @@
+inherited Form1_iPhone4in: TForm1_iPhone4in
+  DesignerMasterStyle = 2
+  inherited GestureManager1: TGestureManager
+    GestureData = <
+      item
+        Control = ImageControl1
+        Collection = <
+          item
+            Action = Action1
+            GestureID = sgiLeft
+          end
+          item
+            Action = Action2
+            GestureID = sgiRight
+          end>
+      end>
+  end
+end
